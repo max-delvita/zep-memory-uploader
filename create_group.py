@@ -14,8 +14,8 @@ client = Zep(
 
 # Create a group
 client.group.add(
-    group_id="mip_group", 
-    description="Modern Indian Parent Knowledge Group.", 
-    name="mip_group"
+    group_id="demo_group", 
+    description="Demo Sales Content Creator", 
+    name="Demo Sales Content Creator"
 )
  

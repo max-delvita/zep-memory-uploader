@@ -1,0 +1,14 @@
+﻿Lead Nurturing Workbook
+Objective: Guide students to build trust and move leads toward sales conversations.
+1. Email Drip Campaign
+* Template: 7-Day Nurture Sequence
+   * Day 1: "Here’s your free resource!"
+   * Day 3: Case study: "How Sarah closed $10k in 1 week."
+   * Day 7: "Ready to 2x your pipeline? [Book Call]"
+2. Personalized DM Strategy
+* Script:
+Hi [Name], loved your post on [topic]! I noticed you’re [specific challenge]. My free guide on [solution] has helped others in your industry. Want me to send it?
+3. Social Proof Library
+   * Student Task: Collect 3 testimonials from past clients.
+   * Example:
+"Working with [Coach] helped me close my first $5k deal. The scripts alone were worth 10x the course!" – Jane D.

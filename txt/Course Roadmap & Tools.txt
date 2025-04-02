@@ -1,0 +1,12 @@
+﻿Course Roadmap & Tools
+Objective: Provide a clear path for implementation.
+Weekly Modules
+1. Week 1: Lead Generation Mastery
+2. Week 2: Nurturing Sequences That Convert
+3. Week 3: Closing Scripts & Handling Objections
+4. Week 4: Scaling with Systems (CRM, Automation)
+Toolkit Recommendations
+* Landing Pages: Paperbell, Carrd
+* Email Marketing: ConvertKit, Mailchimp
+* CRM: HubSpot, Notion
+* Social Scheduler: Buffer, Later

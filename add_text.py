@@ -75,9 +75,15 @@ def add_text_to_graph(text_content, group_id=DEFAULT_GROUP_ID, file_path=None, s
         print("Error: ZEP_API_KEY not found in environment variables")
         sys.exit(1)
 
+    print(f"\n=== ZEP UPLOAD DETAILS ===")
+    print(f"Group ID: {group_id}")
+    print(f"API Key: {api_key[:5]}...{api_key[-5:] if len(api_key) > 10 else ''}")
+    print(f"File: {file_path}")
+    print(f"Source URL: {source_url}")
+    print(f"==========================\n")
+
     client = Zep(
-        api_key=api_key,
-        api_url=ZEP_BASE_URL
+        api_key=api_key
     )
     
     # Split content into chunks
@@ -97,12 +103,12 @@ def add_text_to_graph(text_content, group_id=DEFAULT_GROUP_ID, file_path=None, s
                 f"To watch this video, visit: {source_url}"
             )
             
-            client.graph.add(
+            response = client.graph.add(
                 group_id=group_id,
                 data=url_node,
                 type="text"
             )
-            print(f"Added URL reference node")
+            print(f"Added URL reference node. Response: {response}")
             
             # Add chunks with embedded source information
             for i, chunk in enumerate(chunks, 1):
@@ -114,6 +120,7 @@ def add_text_to_graph(text_content, group_id=DEFAULT_GROUP_ID, file_path=None, s
                         type="text"
                     )
                     print(f"Chunk {i}/{total_chunks} added successfully with source reference")
+                    print(f"Response data: {response}")
                     
                 except Exception as e:
                     print(f"Error processing chunk {i}/{total_chunks}: {str(e)}")
@@ -121,6 +128,7 @@ def add_text_to_graph(text_content, group_id=DEFAULT_GROUP_ID, file_path=None, s
                     
         except Exception as e:
             print(f"Error adding source information: {str(e)}")
+            print(f"Group ID used: {group_id}")
             raise
             
     else:
@@ -133,21 +141,37 @@ def add_text_to_graph(text_content, group_id=DEFAULT_GROUP_ID, file_path=None, s
                     type="text"
                 )
                 print(f"Chunk {i}/{total_chunks} added successfully")
+                print(f"Response data: {response}")
                 
             except Exception as e:
                 print(f"Error processing chunk {i}/{total_chunks}: {str(e)}")
+                print(f"Group ID used: {group_id}")
+                print(f"Chunk size: {len(chunk)} characters")
                 raise
 
     print(f"\nCompleted! All {total_chunks} chunks have been processed.")
+    print(f"Content uploaded to group: {group_id}")
+    print(f"You can check your content at Zep dashboard using this group ID")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python3 add_text.py <path_to_text_file> [source_url] [timestamp]")
+        print("Usage: python3 add_text.py <path_to_text_file> [source_url] [timestamp] [group_id]")
         sys.exit(1)
     
     file_path = sys.argv[1]
     source_url = sys.argv[2] if len(sys.argv) > 2 else None
     timestamp = sys.argv[3] if len(sys.argv) > 3 else None
     
+    # Get group_id from command line arg or use default, ensuring it's not empty
+    input_group_id = sys.argv[4] if len(sys.argv) > 4 else None
+    group_id = input_group_id if input_group_id and input_group_id.strip() else DEFAULT_GROUP_ID
+    
+    # Validate group_id
+    if not group_id or group_id.strip() == "":
+        print(f"Warning: Empty group ID provided. Using default group ID: {DEFAULT_GROUP_ID}")
+        group_id = DEFAULT_GROUP_ID
+    
+    print(f"Using group ID: {group_id}")
+    
     content = read_file_content(file_path)
-    add_text_to_graph(content, file_path=file_path, source_url=source_url, timestamp=timestamp)
+    add_text_to_graph(content, group_id=group_id, file_path=file_path, source_url=source_url, timestamp=timestamp)

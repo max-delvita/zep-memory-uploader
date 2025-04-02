@@ -1,0 +1,24 @@
+﻿Lead Generation Playbook
+Objective: Teach students to identify, attract, and capture high-quality leads.
+1. Define Your Ideal Client Profile (ICP)
+* Template: ICP Worksheet (Fillable PDF)
+   * Demographics (Age, Location, Industry)
+   * Pain Points (e.g., "Struggles to book discovery calls")
+   * Goals (e.g., "Wants to 2x revenue in 6 months")
+   * Preferred Communication Channels (Email, LinkedIn, Instagram DMs)
+2. Lead Magnet Creation
+* Strategy: "The 5-Step Cold Outreach Framework" (Free PDF)
+   * Hook: "Turn strangers into paying clients in 3 emails."
+   * Content: Scripts for subject lines, openers, and CTAs.
+   * Action Step: Create a lead magnet using Canva/Google Docs and host it on a landing page (e.g., Paperbell or Carrd).
+3. Social Media Lead Capture
+* Instagram Strategy:
+   * Post carousels titled "3 Mistakes Killing Your Sales" with a CTA: "DM 'SALES' for my free script."
+   * Use Stories polls: "Struggling with closing? Yes/No → Comment 'HELP' for tips."
+* LinkedIn Strategy:
+   * Share client success stories with a CTA: "Book a free strategy call [link]."
+4. Webinar Funnel Setup
+* Template: Webinar Email Sequence (3 emails)
+   * Email 1: "Free Training: Close 50% More Deals in 30 Days"
+   * Email 2: "Last Chance to Register + Bonus PDF"
+   * Email 3: "Webinar Replay + Upsell Offer"
