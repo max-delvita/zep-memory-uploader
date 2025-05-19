@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/maxdelvita/ALPHA PROJECTS/ZEP/zep-memory-uploader/venv/bin/python3.12" "$0" "$@"
+'''exec' "/Users/maxdelvita/ALPHA PROJECTS/ZEP/zep-memory-uploader/venv/bin/python3.13" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
